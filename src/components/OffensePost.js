@@ -22,7 +22,7 @@ function OffensePost() {
 
     return (
         <div className="min-w-screen flex items-center justify-center px-5 py-5">
-            <div className="w-full mx-auto rounded-lg bg-white shadow-2xl text-gray-800">
+            <div className="w-full md:w-1/2 w-full mx-auto rounded-lg bg-white shadow-2xl text-gray-800">
                 <div className="w-full relative m-0 p-0">
                     <textarea
                         className="w-full h-48 resize-none rounded-md text-gray-600 text-center p-5 text-xl focus:outline-0"
