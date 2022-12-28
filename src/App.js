@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import OffenseList from "./components/OffenseList";
+import OffensePost from "./components/OffensePost";
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-cyan-50 py-4 px-6">
+      <h1 className="text-3xl font-bold text-center">Ofendiditos</h1>
+      <p className='text-center'>El lugar ideal para soltar tu veneno</p>
+      <OffensePost />
+      <OffenseList />
     </div>
   );
 }
