@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-function OffensePost() {
+function OffensePost({ setOffenses }) {
 
     const [offense, setOffense] = useState({ text: "" })
     const [offensecount, setOffensecount] = useState(0)
@@ -16,13 +16,18 @@ function OffensePost() {
 
             // Send to DB
             // Get ID
-            // Mark as done and add to the OffenseList
+
+            // Add to the OffenseList
+            setOffenses(offenses => [offense, ...offenses])
+
+            // Clear the offense
+            setOffense({ text: "" })
         }
     };
 
     return (
-        <div className="min-w-screen flex items-center justify-center px-5 py-5">
-            <div className="w-full md:w-1/2 w-full mx-auto rounded-lg bg-white shadow-2xl text-gray-800">
+        <div className="animate__animated animate__fadeIn min-w-screen flex items-center justify-center px-5 py-5">
+            <div className="w-full md:w-1/2 mx-auto rounded-lg bg-white shadow-2xl text-gray-800">
                 <div className="w-full relative m-0 p-0">
                     <textarea
                         className="w-full h-48 resize-none rounded-md text-gray-600 text-center p-5 text-xl focus:outline-0"
