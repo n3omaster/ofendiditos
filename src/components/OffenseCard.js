@@ -11,7 +11,7 @@ function OffenseCard({ offense = { id: 0, text: "", views: 1, timestamp: "" } })
 
     return (
         <Link to={`/offense/${offense.id}`}>
-            <a className="animate__animated animate__fadeIn min-w-screen flex items-center justify-center px-5 pt-5 pb-1">
+            <a href={`/offense/${offense.id}`} className="animate__animated animate__fadeIn min-w-screen flex items-center justify-center px-5 pt-5 pb-1">
                 <div className="w-full mx-auto rounded-lg bg-white shadow-lg px-5 pt-5 pb-4 text-gray-800">
                     <div className="w-full mb-10">
                         <div className="text-5xl text-indigo-500 text-left leading-tight h-3">“</div>
