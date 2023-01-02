@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import { useHitView } from '../hooks/useHitView'
+import React from 'react'
+// import { useHitView } from '../hooks/useHitView'
 
 // Wouter Router like React Router
 import { Link } from "wouter";
