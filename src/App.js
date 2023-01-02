@@ -9,8 +9,8 @@ function App() {
   return (
     <div className="bg-cyan-100 py-4 px-6">
 
-      <Link href="/">
-        <a><h1 className="text-3xl font-bold text-center">Ofendiditos</h1></a>
+      <Link to="/">
+        <a href="/"><h1 className="text-3xl font-bold text-center">Ofendiditos</h1></a>
       </Link>
 
       <Route path="/" component={HomePage} />
