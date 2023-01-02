@@ -7,7 +7,7 @@ import { HomePage } from './pages/HomePage';
 
 function App() {
   return (
-    <div className="bg-cyan-200 py-4 px-6">
+    <div className="bg-cyan-100 py-4 px-6">
 
       <Link href="/">
         <a><h1 className="text-3xl font-bold text-center">Ofendiditos</h1></a>
