@@ -9,8 +9,6 @@ export const HomePage = () => {
     const [offenses, setOffenses] = useState([
         { id: 1, text: 'Me ofende que me ofendan' },
         { id: 2, text: 'Me ofende que me ofendan' },
-        { id: 3, text: 'Me ofende que me ofendan' },
-        { id: 4, text: 'Me ofende que me ofendan' }
     ])
 
     return (

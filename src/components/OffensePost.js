@@ -2,12 +2,21 @@ import React, { useState } from 'react'
 
 function OffensePost({ setOffenses }) {
 
-    const [offense, setOffense] = useState({ text: "" })
+    const [offense, setOffense] = useState({
+        id: 0,
+        text: "",
+        views: 0,
+        timestamp: ""
+    })
     const [offensecount, setOffensecount] = useState(0)
 
-    const handleSubmit = event => {
+    // Send the offense to the DB
+    const handleSubmit = (event) => {
 
-        setOffense({ text: event.target.value })
+        setOffense({
+            ...offense,
+            text: event.target.value
+        })
         setOffensecount(event.target.value.length)
 
         if (event.keyCode === 13 && event.shiftKey === false) {

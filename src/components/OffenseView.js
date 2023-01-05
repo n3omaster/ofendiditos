@@ -1,12 +1,15 @@
 import React from 'react'
+import { useVisit } from "../hooks/useVisit";
 
 export const OffenseView = ({ params }) => {
 
-    console.log(params.id)
+    // Use custom hook for a visit hit
+    const [visit, hit] = useVisit(params.views)
 
     return (
         <>
-            <h1>{params.id}</h1>
+            <h1>{params.id} {visit}</h1>
+            <button onClick={hit}>Hit</button>
         </>
     )
 }
