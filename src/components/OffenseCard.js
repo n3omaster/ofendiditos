@@ -1,10 +1,13 @@
 import React from 'react'
-// import { useHitView } from '../hooks/useHitView'
+import { useHitView } from '../hooks/useHitView'
 
 // Wouter Router like React Router
 import { Link } from "wouter";
 
 function OffenseCard({ offense = { id: 0, text: "", views: 1, timestamp: "1 hour" } }) {
+
+    // Custom hook for a visit hit and return the number of visits
+    const visits = useHitView(offense.id)
 
     return (
         <Link to={`/offense/${offense.id}`}>
@@ -16,7 +19,7 @@ function OffenseCard({ offense = { id: 0, text: "", views: 1, timestamp: "1 hour
                         <div className="text-5xl text-indigo-500 text-right h-3 -mt-3">”</div>
                     </div>
                     <div className="w-full flex justify-between pt-6 opacity-10 hover:opacity-90">
-                        <p className="text-xs text-gray-600 text-center">{offense.views} views</p>
+                        <p className="text-xs text-gray-600 text-center">{visits} views</p>
                         <p className="text-xs text-gray-600 text-center">{offense.timestamp} ago</p>
                     </div>
                 </div>

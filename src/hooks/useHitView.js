@@ -1,20 +1,15 @@
 import { useState, useEffect } from "react"
 
-export const useHitView = () => {
+export const useHitView = (offense_id) => {
 
-    const [view, viewState] = useState()
-
-    // setTimeout
-    setTimeout(() => {
-        viewState(view => view + 1)
-        console.log("first")
-    }, 1000);
+    const [view, viewState] = useState(0)
 
     // useEffect for hit a view ++
     useEffect(() => {
-        // Send a hit to DB for this view
-        // {offense.id} {offense.views} + 1 view count
-    }, [])
+        // get the current offense views and add one
+        console.log(view)
+        viewState(view + 1)
+    }, [offense_id])
 
     return view
 }
