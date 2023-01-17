@@ -20,6 +20,7 @@ function OffensePost({ setOffenses }) {
         setOffensecount(event.target.value.length)
 
         if (event.keyCode === 13 && event.shiftKey === false) {
+            
             event.preventDefault();
             console.log('form submitted ✅');
 

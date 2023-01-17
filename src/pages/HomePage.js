@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import OffenseList from '../components/OffenseList'
 import OffensePost from '../components/OffensePost'
 
 export const HomePage = () => {
 
     // Get a list of 50 offenses from DB
-    // Display them in a list
     const [offenses, setOffenses] = useState([
         { id: 1, text: 'Me ofende que me ofendan' },
         { id: 2, text: 'Me ofende que me ofendan' },
@@ -21,6 +20,11 @@ export const HomePage = () => {
         { id: 12, text: 'Me ofende que me ofendan' },
         { id: 13, text: 'Me ofende que me ofendan' },
     ])
+
+    // Create a useEffect for localstorage saing on every chane
+    useEffect(() => {
+        localStorage.setItem('offenses', JSON.stringify(offenses))
+    }, [offenses])
 
     return (
         <>
